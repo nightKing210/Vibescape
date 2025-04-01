@@ -1,0 +1,133 @@
+
+body {
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+
+.main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.25s;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    color: white;
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.genreTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Genre Image */
+img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Song Container */
+#songContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.song-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* RESPONSIVENESS */
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 95%;
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    img {
+        height: 150px;
+    }
+
+    .song-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .play-button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .main {
+        width: 98%;
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    img {
+        height: 120px;
+    }
+
+    .song-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .play-button {
+        width: 100%;
+        padding: 6px;
+        font-size: 14px;
+    }
+}

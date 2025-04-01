@@ -1,0 +1,122 @@
+
+body {
+    background-color: rgb(5, 29, 71);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.titles {
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.container1, .container2, .container3, .container4, .container5 {
+    position: relative;
+    width: 90%;
+    max-width: 1200px; 
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+.commonContAtt {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: center;
+    background-color: rgba(4, 40, 150, 0.3);
+    transition: all 0.25s;
+    border-radius: 10px;
+
+}
+
+
+
+
+.commonContAtt:hover {
+    background-color: rgba(1, 52, 205, 0.5);
+    box-shadow: 5px 5px 10px rgba(5, 5, 5, 0.3);
+}
+
+
+.commonBatt {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 10px rgba(5, 5, 5, 0.1);
+    transition: all 0.25s;
+    font-weight: bold;
+}
+
+.commonBatt:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 1024px) {
+    .titles {
+        font-size: 2.5em;
+    }
+
+    .commonBatt {
+        font-size: 1.3rem;
+        width: 70px;
+        height: 70px;
+        font-weight: bold;
+    }
+
+    .commonContAtt {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+    .titles {
+        font-size: 2em;
+    }
+
+    .commonBatt {
+        font-size: 1rem;
+        width: 60px;
+        height: 60px;
+        font-weight: bold;
+    }
+
+    .commonContAtt {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+}
+
+.commonPatt{
+    color: white;
+}
+
+.soundButton {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}

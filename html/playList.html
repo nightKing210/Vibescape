@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayList</title>
+    <link rel="stylesheet" href="../CSS/playlist.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
+</head>
+<body>
+    
+   
+    <p class="titles">Select according to Your Mood</p>
+    <div class="container1 commonContAtt">
+         <!--Animal-->
+        <!--1-->
+        <div class="soundButton">
+
+            <a href="../html/films.html">
+                <button class="commonBatt" id="hollywood">
+             
+                </button>
+            
+            </a>
+
+
+
+            <p class="commonPatt">Films</p>  
+                   
+        </div>
+        <!--2-->
+        <div >
+            <button class="commonBatt" id="focus" onclick="details('Focus', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5'],['../audios/playlist/foc1.mp3','../audios/playlist/foc2.mp3','../audios/playlist/foc3.mp3','../audios/playlist/foc4.mp3','../audios/playlist/foc5.mp3'],'../images/focus.webp' )"></button>
+            <p class="commonPatt">Focus</p>  
+            </div>
+         <!--3-->
+         
+        <div >
+            <button class="commonBatt" id="study" onclick="details('Study', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5'],['../audios/playlist/s1.mp3','../audios/playlist/s2.mp3','../audios/playlist/s3.mp3','../audios/playlist/s4.mp3','../audios/playlist/s5.mp3'],'../images/study.jpeg')" ></button> 
+            <p class="commonPatt">Study</p>         
+        </div>
+        <!--4-->
+        <div >
+            <button class="commonBatt" id="relax" onclick="details('Relax' , ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5','Music #6' , 'Music #7' , 'Music #8' ],['../audios/playlist/r1.mp3','../audios/playlist/r2.mp3','../audios/playlist/r3.mp3','../audios/playlist/r4.mp3','../audios/playlist/r5.mp3' ,'../audios/playlist/r6.mp3','../audios/playlist/r7.mp3','../audios/playlist/r8.mp3'],'../images/relax.jpeg')"></button>
+            <p class="commonPatt">Relax</p>
+        </div>
+
+
+            <!--6-->
+         
+            <div >
+                <button class="commonBatt" id="meditation" onclick="details('Meditation', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5', 'Music #6' , 'Music #7' , 'Music #8'],['../audios/playlist/m1.mp3','../audios/playlist/m2.mp3','../audios/playlist/m3.mp3','../audios/playlist/m4.mp3','../audios/playlist/m5.mp3' ,'../audios/playlist/m6.mp3','../audios/playlist/m7.mp3','../audios/playlist/m8.mp3'],'../images/meditation.jpeg')"></button>
+                <p class="commonPatt">Meditation</p>             
+            </div>
+         <!--8-->
+            <div class="soundButton">
+                <button class="commonBatt" id="coding" onclick="details('Coding', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5' ,'Music #6'],['../audios/playlist/c1.mp3','../audios/playlist/c2.mp3','../audios/playlist/c3.mp3','../audios/playlist/c4.mp3','../audios/playlist/c5.mp3' ,'../audios/playlist/c6.mp3'],'../images/coding.jpeg')"></button>
+                <p class="commonPatt">Coding</p>            
+            </div>
+            <!--9-->
+            <div >
+                <button class="commonBatt" id="sufi" onclick="details('Sufi', ['Music #1', 'Music #2', 'Music #3', 'Music #4' , 'Music #5', 'Music #6', 'Music #7' , 'Music #8' , 'Music #9' , 'Music #10' , 'Music #11'],['../audios/playlist/sufi1.mp3','../audios/playlist/sufi2.mp3','../audios/playlist/sufi3.mp3','../audios/playlist/sufi4.mp3','../audios/playlist/sufi5.mp3','../audios/playlist/sufi6.mp3' ,'../audios/playlist/sufi7.mp3' ,'../audios/playlist/sufi8.mp3' ,'../audios/playlist/sufi9.mp3' ,'../audios/playlist/sufi10.mp3' ,'../audios/playlist/sufi11.mp3' ],'../images/sufi.jpeg')"></button>
+                <p class="commonPatt">Sufi</p>            
+            </div>
+            <!--10-->
+         
+            <div >
+                <button class="commonBatt" id="Fantasy" onclick="details('Fantasy', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5', 'Music #6', 'Music #7', 'Music #8', 'Music #9', 'Music #10', 'Music #11', 'Music #12', 'Music #13'],['../audios/playlist/f1.mp3','../audios/playlist/f2.mp3','../audios/playlist/f3.mp3','../audios/playlist/f4.mp3','../audios/playlist/f5.mp3','../audios/playlist/f6.mp3' ,'../audios/playlist/f7.mp3' ,'../audios/playlist/f8.mp3' ,'../audios/playlist/f9.mp3' ,'../audios/playlist/f10.mp3' ,'../audios/playlist/f11.mp3','../audios/playlist/f12.mp3' ,'../audios/playlist/f13.mp3'],'../images/fantasy.jpeg')"></button>
+                <p class="commonPatt">Fantasy</p>            
+            </div>
+            <!--11-->
+         
+            <div >
+                <button class="commonBatt" id="Jazz" onclick="details('Jazz', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5', 'Music #6', 'Music #7', 'Music #8', 'Music #9', 'Music #10', 'Music #11'],['../audios/playlist/j1.mp3','../audios/playlist/j2.mp3','../audios/playlist/j3.mp3','../audios/playlist/j4.mp3','../audios/playlist/j5.mp3','../audios/playlist/j6.mp3' ,'../audios/playlist/j7.mp3' ,'../audios/playlist/j8.mp3' ,'../audios/playlist/j9.mp3' ,'../audios/playlist/j10.mp3','../audios/playlist/j11.mp3'  ],'../images/jazz.jpeg')"></button>
+                <p class="commonPatt">Jazz</p>            
+            </div>
+
+                        <!--11-->
+         
+         <div class="soundButton">
+                <button class="commonBatt" id="Regional"onclick="details('Regional', ['Turkish #1', 'Turkish  #2', 'Turkish  #3', 'Turkish  #4', 'Balochi #5', 'Balochi #6', 'Balochi #7', 'Balochi #8', 'Persian #9', 'Persian #10', 'Persian #11','Afghan #12','Afghan #13','Punjabi #14','Punjabi #15' ,'Punjabi #16','European #17','European #18','European #19','Arabic #20','Arabic #21' ,'Arabic #22'],['../audios/playlist/re1.mp3','../audios/playlist/re2.mp3','../audios/playlist/re3.mp3','../audios/playlist/re4.mp3','../audios/playlist/re5.mp3','../audios/playlist/re6.mp3' ,'../audios/playlist/re7.mp3' ,'../audios/playlist/re8.mp3' ,'../audios/playlist/re9.mp3' ,'../audios/playlist/re10.mp3' ,'../audios/playlist/re11.mp3','../audios/playlist/re12.mp3','../audios/playlist/re13.mp3','../audios/playlist/re14.mp3','../audios/playlist/re15.mp3' ,'../audios/playlist/re16.mp3','../audios/playlist/re17.mp3','../audios/playlist/re18.mp3','../audios/playlist/re19.mp3','../audios/playlist/re20.mp3','../audios/playlist/re21.mp3' ,'../audios/playlist/re22.mp3'  ],'../images/regional.jpeg')"></button>
+                <p class="commonPatt">Regional</p>            
+         </div>
+            
+
+
+         
+            
+    </div>
+   
+
+</body>
+
+<script>
+    let ClassName = ['hollywood', 'focus', 'study', 'relax', 'meditation', 'coding', 'sufi', 'Fantasy', 'Jazz', 'Regional'];
+    let imgPath = ['../images/hollywood.jpeg', '../images/focus.webp', '../images/study.jpeg', '../images/relax.jpeg',  '../images/meditation.jpeg', '../images/coding.jpeg', '../images/sufi.jpeg', '../images/fantasy.jpeg', '../images/jazz.jpeg', '../images/regional.jpeg'];
+
+    for (let i = 0; i < ClassName.length; i++) {
+        let img = document.getElementById(ClassName[i]);
+        img.style.backgroundImage = "url(" + imgPath[i] + ")";
+        img.style.backgroundSize = "cover";
+        img.style.backgroundPosition = "center";
+        img.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    }
+
+
+
+    function details(Genre,  songs , Url,pic) {
+        localStorage.setItem('songs', JSON.stringify({
+            name: Genre,
+            songList: songs,
+            URL:Url,
+            imgPath:pic
+            
+        }));
+
+        window.location.href = 'musicList.html';
+
+    }
+
+
+
+</script>
+
+</html>

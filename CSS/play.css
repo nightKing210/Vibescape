@@ -1,0 +1,135 @@
+body {
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+/* Main Container */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 90%;
+    max-width: 500px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive Image */
+img {
+    border-radius: 10px;
+    width: 50%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* Title */
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 0px 0px;
+ }
+
+/* Play/Pause Button */
+button {
+    color: white;
+    border: solid white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Progress Bar */
+#progressBar {
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    accent-color: white;
+    margin-top: 15px;
+}
+
+/* Controls Container */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    img {
+        max-width: 300px;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+    }
+
+    #progressBar {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        width: 95%;
+        max-width: 350px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 50%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-top:10px;
+    }
+
+    img {
+        max-width: 250px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+    }
+
+    #progressBar {
+        max-width: 250px;
+    }
+}

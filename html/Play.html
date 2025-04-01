@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="../CSS/play.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
+</head>
+<body>
+
+    <div class="main">
+        <h1 class="title">Song</h1>
+        <img src="../images/LOTR.svg" alt="logo" id="pic">
+
+        <div class="controls">
+            <input type="range" id="progressBar" value="0" min="0" max="100" step="1">
+
+            <button id="playPauseBtn" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 14 14">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M1.5 12.35a1.14 1.14 0 0 0 .63 1a1.24 1.24 0 0 0 1.22 0L12 8a1.11 1.11 0 0 0 0-2L3.35.69a1.24 1.24 0 0 0-1.22 0a1.14 1.14 0 0 0-.63 1Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script >
+
+
+const selectedSong = JSON.parse(localStorage.getItem("selectedSong"));
+document.querySelector('.title').innerHTML = selectedSong.name; 
+document.getElementById('pic').src = selectedSong.imagePath;
+
+
+
+if (!selectedSong || !selectedSong.url) {
+    alert("No song selected! Redirecting to music list.");
+    window.location.href = "MusicList.html"; 
+}
+
+let audio = new Audio(selectedSong.url);
+let playPauseBtn = document.getElementById("playPauseBtn");
+let progressBar = document.getElementById("progressBar");
+let isPlaying = false;
+
+
+// Play/Pause Button Click
+playPauseBtn.addEventListener("click", () => {
+    if (!isPlaying) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+    isPlaying = !isPlaying;
+    ChangeLogo(); 
+});
+
+audio.addEventListener("timeupdate", () => {
+    let progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.value = progress;
+});
+
+progressBar.addEventListener("input", () => {
+    let seekTime = (progressBar.value / 100) * audio.duration;
+    audio.currentTime = seekTime;
+});
+
+function ChangeLogo() {
+    playPauseBtn.innerHTML = isPlaying
+        ? `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 14 14">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4 .5H1.5a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1H4a1 1 0 0 0 1-1v-11a1 1 0 0 0-1-1m8.5 0H10a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-11a1 1 0 0 0-1-1"/>
+        </svg>`
+        : `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 14 14">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M1.5 12.35a1.14 1.14 0 0 0 .63 1a1.24 1.24 0 0 0 1.22 0L12 8a1.11 1.11 0 0 0 0-2L3.35.69a1.24 1.24 0 0 0-1.22 0a1.14 1.14 0 0 0-.63 1Z"/>
+        </svg>`;
+}
+
+
+    </script>
+</body>
+</html>

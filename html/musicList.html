@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="../CSS/musicList.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
+</head>
+<body>
+   
+    <div class="main">
+       
+        <h1 id="genreTitle"></h1>
+        
+    
+        <div id="songContainer"></div>
+    </div>
+
+    <script>
+       
+const data = JSON.parse(localStorage.getItem('songs'));
+
+document.getElementById("genreTitle").textContent = `${data.name}`;
+
+const songContainer = document.getElementById("songContainer");
+let images = data.imgPath;
+
+data.songList.forEach((song, index) => {
+    let songDiv = document.createElement("div");
+    songDiv.classList.add("song-item");
+    songDiv.textContent = song;
+
+
+    let songName = data.songList[index]
+    let songUrl = data.URL[index]; 
+
+    
+    songDiv.addEventListener("click", function () {
+        localStorage.setItem("selectedSong", JSON.stringify({
+            name: songName, // Song name
+            url: songUrl, // Song URL
+            imagePath:images
+        }));
+        window.location.href = "Play.html";
+    });
+
+    songContainer.appendChild(songDiv);
+});
+
+
+        
+    </script>
+
+</body>
+</html>

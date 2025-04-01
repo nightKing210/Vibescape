@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link rel="stylesheet" href="../CSS/film.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="commonAttribute" id="dragon" onclick="details('How to Train Your Dragon', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5', 'Music #6', 'Music #7'],['../audios/playlist/dragon1.mp3','../audios/playlist/dragon2.mp3','../audios/playlist/dragon3.mp3','../audios/playlist/dragon4.mp3','../audios/playlist/dragon5.mp3' ,'../audios/playlist/dragon6.mp3','../audios/playlist/dragon7.mp3'],'../images/HTTYD.jpeg')">
+            
+            <h1 class="genreTitle">How To Train Your Dragon</h1>
+        </div>
+
+        <div class="commonAttribute" id="LOTR" onclick="details('LOTR', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5', 'Music #6', 'Music #7', 'Music #8','Music #9' ,'Music #10','Music #11','Music #12' ], ['../audios/playlist/lotr1.mp3','../audios/playlist/lotr2.mp3','../audios/playlist/lotr3.mp3','../audios/playlist/lotr4.mp3','../audios/playlist/lotr5.mp3','../audios/playlist/lotr6.mp3','../audios/playlist/lotr7.mp3','../audios/playlist/lotr8.mp3' , ,'../audios/playlist/lotr9.mp3','../audios/playlist/lotr10.mp3','../audios/playlist/lotr11.mp3','../audios/playlist/lotr12.mp3'],'../images/LOTR.svg')">
+            <h1 class="genreTitle">Lord Of The Ring</h1>
+        </div>
+
+        <div class="commonAttribute" id="Potter" onclick="details('Harry Potter', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5'], ['../audios/playlist/potter1.mp3','../audios/playlist/potter2.mp3','../audios/playlist/potter3.mp3','../audios/playlist/potter4.mp3','../audios/playlist/potter5.mp3'],'../images/potter.svg')">
+            <h1 class="genreTitle">Harry Potter</h1>
+        </div>
+
+        <div class="commonAttribute" id="GOT" onclick="details('Game Of Thrones', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5', 'Music #6', 'Music #7'], ['../audios/playlist/got1.mp3','../audios/playlist/got2.mp3','../audios/playlist/got3.mp3','../audios/playlist/got4.mp3','../audios/playlist/got5.mp3','../audios/playlist/got6.mp3','../audios/playlist/got7.mp3'],'../images/got.jpeg')">
+            <h1 class="genreTitle">Game Of Thrones</h1>
+        </div>
+
+        <div class="commonAttribute" id="Dune" onclick="details('Dune', ['Music #1', 'Music #2', 'Music #3', 'Music #4', 'Music #5'], ['../audios/playlist/dune1.mp3','../audios/playlist/dune2.mp3','../audios/playlist/dune3.mp3','../audios/playlist/dune4.mp3','../audios/playlist/dune5.mp3'],'../images/dune.jpeg')">
+            <h1 class="genreTitle">Dune</h1>
+        </div>
+
+   
+
+    </div>
+    
+    
+</body>
+<SCript>
+let ClassName = ['dragon','LOTR' , 'Potter' , 'GOT' , 'Dune'];
+let imgPath = ['../images/HTTYD.svg', '../images/LOTR.svg', '../images/potter.svg', '../images/got.svg', '../images/dune.svg']
+
+for (let i = 0; i < ClassName.length; i++) {
+    let img = document.getElementById(ClassName[i]);
+    img.style.backgroundImage = "url(" + imgPath[i] + ")";
+    img.style.backgroundSize = "cover";
+    img.style.backgroundPosition = "center";
+    img.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+}
+
+function details(Genre,  songs , Url,pic) {
+        localStorage.setItem('songs', JSON.stringify({
+            name: Genre,
+            songList: songs,
+            URL:Url,
+            imgPath:pic
+            
+        }));
+
+        window.location.href = 'musicList.html';
+
+    }
+
+</SCript>
+
+</html>
